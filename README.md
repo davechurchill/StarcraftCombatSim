@@ -1,4 +1,4 @@
-<video src="https://davechurchill.ca/files/video/bw.mp4" controls></video>
+[![StarcraftCombatSim demo](https://davechurchill.ca/code/images/starcraftcombatsim.jpg)](https://davechurchill.ca/files/video/bw.mp4)
 
 # StarcraftCombatSim
 
