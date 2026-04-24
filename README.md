@@ -18,6 +18,20 @@ cmake --build build --config Release --target StarcraftCombatSimVisualizer --par
 
 There is also a hand-authored Visual Studio solution at `vs\StarcraftCombatSim.sln`, matching the SparCraft `vs` layout. It contains `StarcraftCombatSimCore` as a static library and `StarcraftCombatSimVisualizer` as the runnable SFML GUI project.
 
+## StarCraft data
+
+This repository does not include the StarCraft data files. To run simulations, copy the three MPQ files from your StarCraft installation into:
+
+```text
+bin/starcraft_data/mpq
+```
+
+The expected MPQ files are `StarCraft.mpq`, `STARDAT.MPQ`, and `BROODAT.MPQ`. Put SCX/SCM map files in:
+
+```text
+bin/starcraft_data/maps
+```
+
 ## Run
 
 ```powershell
