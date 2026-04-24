@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.24)
 
-project(StarCraftCombat LANGUAGES CXX)
+project(StarcraftCombatSim LANGUAGES CXX)
 
 # OpenBW's headers use std::result_of/std::is_literal_type, so this wrapper
 # project must compile them in C++17 mode even though SparCraft itself uses C++23.
@@ -21,8 +21,8 @@ if(CMAKE_CONFIGURATION_TYPES)
   endforeach()
 endif()
 
-set(STARCRAFT_COMBAT_ROOT "${CMAKE_SOURCE_DIR}")
-set(STARCRAFT_COMBAT_SRC_DIR "${CMAKE_SOURCE_DIR}/src")
+set(STARCRAFT_COMBAT_SIM_ROOT "${CMAKE_SOURCE_DIR}")
+set(STARCRAFT_COMBAT_SIM_SRC_DIR "${CMAKE_SOURCE_DIR}/src")
 
 set(SFML_ROOT "C:/dev/libraries/SFML-3.0.1" CACHE PATH "Path to SFML 3")
 list(APPEND CMAKE_PREFIX_PATH "${SFML_ROOT}")
@@ -33,78 +33,78 @@ endif()
 find_package(SFML 3 COMPONENTS System Window Graphics REQUIRED)
 find_package(OpenGL REQUIRED)
 
-add_library(StarCraftCombatCore STATIC
-  "${STARCRAFT_COMBAT_SRC_DIR}/GameState.cpp"
-  "${STARCRAFT_COMBAT_SRC_DIR}/Scripts.hpp"
+add_library(StarcraftCombatSimCore STATIC
+  "${STARCRAFT_COMBAT_SIM_SRC_DIR}/GameState.cpp"
+  "${STARCRAFT_COMBAT_SIM_SRC_DIR}/Scripts.hpp"
 )
 
-target_include_directories(StarCraftCombatCore
+target_include_directories(StarcraftCombatSimCore
   PUBLIC
-    "${STARCRAFT_COMBAT_SRC_DIR}"
+    "${STARCRAFT_COMBAT_SIM_SRC_DIR}"
 )
 
-target_compile_definitions(StarCraftCombatCore
+target_compile_definitions(StarcraftCombatSimCore
   PUBLIC
     NOMINMAX
 )
 
 if(MSVC)
-  set_target_properties(StarCraftCombatCore PROPERTIES
+  set_target_properties(StarcraftCombatSimCore PROPERTIES
     VS_GLOBAL_VcpkgEnabled false
     VS_GLOBAL_VcpkgApplocalDeps false
   )
-  target_compile_options(StarCraftCombatCore PRIVATE /bigobj)
+  target_compile_options(StarcraftCombatSimCore PRIVATE /bigobj)
 endif()
 
-add_executable(StarCraftCombatVisualizer
-  "${STARCRAFT_COMBAT_SRC_DIR}/Renderer.cpp"
-  "${STARCRAFT_COMBAT_SRC_DIR}/main.cpp"
-  "${STARCRAFT_COMBAT_SRC_DIR}/imgui/imgui.cpp"
-  "${STARCRAFT_COMBAT_SRC_DIR}/imgui/imgui_draw.cpp"
-  "${STARCRAFT_COMBAT_SRC_DIR}/imgui/imgui_tables.cpp"
-  "${STARCRAFT_COMBAT_SRC_DIR}/imgui/imgui_widgets.cpp"
-  "${STARCRAFT_COMBAT_SRC_DIR}/imgui/imgui-SFML.cpp"
+add_executable(StarcraftCombatSimVisualizer
+  "${STARCRAFT_COMBAT_SIM_SRC_DIR}/Renderer.cpp"
+  "${STARCRAFT_COMBAT_SIM_SRC_DIR}/main.cpp"
+  "${STARCRAFT_COMBAT_SIM_SRC_DIR}/imgui/imgui.cpp"
+  "${STARCRAFT_COMBAT_SIM_SRC_DIR}/imgui/imgui_draw.cpp"
+  "${STARCRAFT_COMBAT_SIM_SRC_DIR}/imgui/imgui_tables.cpp"
+  "${STARCRAFT_COMBAT_SIM_SRC_DIR}/imgui/imgui_widgets.cpp"
+  "${STARCRAFT_COMBAT_SIM_SRC_DIR}/imgui/imgui-SFML.cpp"
 )
 
-set_target_properties(StarCraftCombatVisualizer PROPERTIES
-  OUTPUT_NAME StarCraftCombat
+set_target_properties(StarcraftCombatSimVisualizer PROPERTIES
+  OUTPUT_NAME StarcraftCombatSim
   UNITY_BUILD ON
 )
 
 set_source_files_properties(
-  "${STARCRAFT_COMBAT_SRC_DIR}/imgui/imgui.cpp"
-  "${STARCRAFT_COMBAT_SRC_DIR}/imgui/imgui_draw.cpp"
-  "${STARCRAFT_COMBAT_SRC_DIR}/imgui/imgui_tables.cpp"
-  "${STARCRAFT_COMBAT_SRC_DIR}/imgui/imgui_widgets.cpp"
-  "${STARCRAFT_COMBAT_SRC_DIR}/imgui/imgui-SFML.cpp"
+  "${STARCRAFT_COMBAT_SIM_SRC_DIR}/imgui/imgui.cpp"
+  "${STARCRAFT_COMBAT_SIM_SRC_DIR}/imgui/imgui_draw.cpp"
+  "${STARCRAFT_COMBAT_SIM_SRC_DIR}/imgui/imgui_tables.cpp"
+  "${STARCRAFT_COMBAT_SIM_SRC_DIR}/imgui/imgui_widgets.cpp"
+  "${STARCRAFT_COMBAT_SIM_SRC_DIR}/imgui/imgui-SFML.cpp"
   PROPERTIES SKIP_UNITY_BUILD_INCLUSION ON
 )
 
 if(MSVC)
-  set_target_properties(StarCraftCombatVisualizer PROPERTIES
+  set_target_properties(StarcraftCombatSimVisualizer PROPERTIES
     VS_GLOBAL_VcpkgEnabled false
     VS_GLOBAL_VcpkgApplocalDeps false
   )
 endif()
 
-target_include_directories(StarCraftCombatVisualizer
+target_include_directories(StarcraftCombatSimVisualizer
   PRIVATE
-    "${STARCRAFT_COMBAT_SRC_DIR}"
-    "${STARCRAFT_COMBAT_SRC_DIR}/imgui"
+    "${STARCRAFT_COMBAT_SIM_SRC_DIR}"
+    "${STARCRAFT_COMBAT_SIM_SRC_DIR}/imgui"
 )
 
-target_compile_definitions(StarCraftCombatVisualizer
+target_compile_definitions(StarcraftCombatSimVisualizer
   PRIVATE
-    STARCRAFT_COMBAT_ROOT="${STARCRAFT_COMBAT_ROOT}"
+    STARCRAFT_COMBAT_SIM_ROOT="${STARCRAFT_COMBAT_SIM_ROOT}"
 )
 
 if(MSVC)
-  target_compile_options(StarCraftCombatVisualizer PRIVATE /bigobj)
+  target_compile_options(StarcraftCombatSimVisualizer PRIVATE /bigobj)
 endif()
 
-target_link_libraries(StarCraftCombatVisualizer
+target_link_libraries(StarcraftCombatSimVisualizer
   PRIVATE
-    StarCraftCombatCore
+    StarcraftCombatSimCore
     SFML::System
     SFML::Window
     SFML::Graphics

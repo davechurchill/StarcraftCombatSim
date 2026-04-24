@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StarCraftCombatCore", "StarCraftCombatCore.vcxproj", "{3A6B9B1D-A3F4-4C3E-8DB1-62E6FE8410B1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StarcraftCombatSimCore", "StarcraftCombatSimCore.vcxproj", "{3A6B9B1D-A3F4-4C3E-8DB1-62E6FE8410B1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StarCraftCombatVisualizer", "StarCraftCombatVisualizer.vcxproj", "{EDB21622-A05F-4C3B-8D68-4E20C5E3073C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StarcraftCombatSimVisualizer", "StarcraftCombatSimVisualizer.vcxproj", "{EDB21622-A05F-4C3B-8D68-4E20C5E3073C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3A6B9B1D-A3F4-4C3E-8DB1-62E6FE8410B1} = {3A6B9B1D-A3F4-4C3E-8DB1-62E6FE8410B1}
 	EndProjectSection

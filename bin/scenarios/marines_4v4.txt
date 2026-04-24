@@ -1,4 +1,4 @@
-# StarCraftCombat scenario format:
+# StarcraftCombatSim scenario format:
 # map <SCX/SCM map path>
 # script <AttackClosest|KiteClosest|None>
 # script <player> <AttackClosest|KiteClosest|None>

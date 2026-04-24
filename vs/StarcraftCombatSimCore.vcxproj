@@ -12,7 +12,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3A6B9B1D-A3F4-4C3E-8DB1-62E6FE8410B1}</ProjectGuid>
-    <RootNamespace>StarCraftCombatCore</RootNamespace>
+    <RootNamespace>StarcraftCombatSimCore</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <VcpkgEnabled>false</VcpkgEnabled>
     <VcpkgApplocalDeps>false</VcpkgApplocalDeps>

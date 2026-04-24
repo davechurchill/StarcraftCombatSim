@@ -17,8 +17,8 @@
 namespace {
 
 std::filesystem::path projectRoot() {
-#ifdef STARCRAFT_COMBAT_ROOT
-    return std::filesystem::path(STARCRAFT_COMBAT_ROOT);
+#ifdef STARCRAFT_COMBAT_SIM_ROOT
+    return std::filesystem::path(STARCRAFT_COMBAT_SIM_ROOT);
 #else
     return std::filesystem::current_path();
 #endif
@@ -141,7 +141,7 @@ int main(int argc, char** argv) {
 
         scc::Renderer renderer(state);
 
-        sf::RenderWindow window(sf::VideoMode({1280u, 720u}), "StarCraftCombat - OpenBW combat sandbox");
+        sf::RenderWindow window(sf::VideoMode({1280u, 720u}), "StarcraftCombatSim - OpenBW combat sandbox");
         window.setFramerateLimit(60);
         renderer.centerOnCombat(window, state);
         if (!ImGui::SFML::Init(window)) {
@@ -282,7 +282,7 @@ int main(int argc, char** argv) {
         }
         ImGui::SFML::Shutdown(window);
     } catch (const std::exception& e) {
-        std::cerr << "StarCraftCombat error: " << e.what() << '\n';
+        std::cerr << "StarcraftCombatSim error: " << e.what() << '\n';
         return 1;
     }
 

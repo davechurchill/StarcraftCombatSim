@@ -12,7 +12,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{EDB21622-A05F-4C3B-8D68-4E20C5E3073C}</ProjectGuid>
-    <RootNamespace>StarCraftCombatVisualizer</RootNamespace>
+    <RootNamespace>StarcraftCombatSimVisualizer</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <VcpkgEnabled>false</VcpkgEnabled>
     <VcpkgApplocalDeps>false</VcpkgApplocalDeps>
@@ -45,7 +45,7 @@
   <PropertyGroup>
     <OutDir>..\bin\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <TargetName>StarCraftCombat</TargetName>
+    <TargetName>StarcraftCombatSim</TargetName>
     <LibraryPath>$(SFML_DIR)\lib;$(LibraryPath)</LibraryPath>
     <IncludePath>$(SFML_DIR)\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
@@ -53,7 +53,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>..\src;..\src\imgui;$(SFML_DIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;NOMINMAX;_CRT_SECURE_NO_WARNINGS;STARCRAFT_COMBAT_ROOT=&quot;$([System.IO.Path]::GetFullPath('$(ProjectDir)..').Replace('\','/'))&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;NOMINMAX;_CRT_SECURE_NO_WARNINGS;STARCRAFT_COMBAT_SIM_ROOT=&quot;$([System.IO.Path]::GetFullPath('$(ProjectDir)..').Replace('\','/'))&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -66,7 +66,7 @@
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(Platform)\$(Configuration)\StarCraftCombatCore\StarCraftCombatCore_d.lib;sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(Platform)\$(Configuration)\StarcraftCombatSimCore\StarcraftCombatSimCore_d.lib;sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SFML_DIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
@@ -78,7 +78,7 @@
       <Optimization>Full</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>..\src;..\src\imgui;$(SFML_DIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;NOMINMAX;_CRT_SECURE_NO_WARNINGS;STARCRAFT_COMBAT_ROOT=&quot;$([System.IO.Path]::GetFullPath('$(ProjectDir)..').Replace('\','/'))&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;NOMINMAX;_CRT_SECURE_NO_WARNINGS;STARCRAFT_COMBAT_SIM_ROOT=&quot;$([System.IO.Path]::GetFullPath('$(ProjectDir)..').Replace('\','/'))&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeader>
@@ -91,7 +91,7 @@
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(Platform)\$(Configuration)\StarCraftCombatCore\StarCraftCombatCore.lib;sfml-graphics.lib;sfml-window.lib;sfml-system.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(Platform)\$(Configuration)\StarcraftCombatSimCore\StarcraftCombatSimCore.lib;sfml-graphics.lib;sfml-window.lib;sfml-system.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SFML_DIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
@@ -100,7 +100,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="StarCraftCombatCore.vcxproj">
+    <ProjectReference Include="StarcraftCombatSimCore.vcxproj">
       <Project>{3A6B9B1D-A3F4-4C3E-8DB1-62E6FE8410B1}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>

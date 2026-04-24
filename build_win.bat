@@ -8,7 +8,7 @@ if "%SFML_DIR%"=="" (
 cmake -S . -B build -DSFML_DIR="%SFML_DIR%\lib\cmake\SFML"
 if errorlevel 1 exit /b %errorlevel%
 
-cmake --build build --config Release --target StarCraftCombatVisualizer --parallel 8
+cmake --build build --config Release --target StarcraftCombatSimVisualizer --parallel 8
 if errorlevel 1 exit /b %errorlevel%
 
 endlocal
