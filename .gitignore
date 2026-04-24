@@ -42,3 +42,5 @@ build/
 *.dwo
 *.MPQ
 *.scx
+/vs/.vs
+/vs/x64
