@@ -1,0 +1,7 @@
+# 4 Wraiths vs 4 Scouts
+
+map (4)Python.scx
+script AttackClosest
+
+unit Terran_Wraith 0 1900 2048 4 36
+unit Protoss_Scout 1 2200 2048 4 44

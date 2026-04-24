@@ -1,0 +1,7 @@
+# Vultures kite a larger zergling swarm.
+map (4)Python.scx
+script AttackClosest
+script 0 KiteClosest
+
+unit Terran_Vulture 0 1880 2096 8 36
+unit Zerg_Zergling 1 2240 2096 18 22

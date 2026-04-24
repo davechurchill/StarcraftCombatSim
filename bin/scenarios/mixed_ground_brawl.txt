@@ -1,0 +1,14 @@
+# A larger mixed-race ground fight with melee, ranged units, and medics
+
+map (4)Python.scx
+script AttackClosest
+
+unit Terran_Marine 0 1840 1900 8 24
+unit Terran_Medic 0 1780 1988 3 28
+unit Protoss_Zealot 0 1900 2030 6 28
+unit Protoss_Dragoon 0 1820 2110 6 44
+
+unit Zerg_Zergling 1 2260 1900 14 18
+unit Zerg_Hydralisk 1 2340 2020 8 28
+unit Terran_Firebat 1 2260 2130 4 28
+unit Zerg_Ultralisk 1 2420 1940 2 44

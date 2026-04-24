@@ -1,0 +1,12 @@
+# Terran bio ball with medics vs a larger Zerg ground swarm
+
+map (4)Python.scx
+script AttackClosest
+
+unit Terran_Marine 0 1860 1960 12 24
+unit Terran_Firebat 0 1920 2056 6 28
+unit Terran_Medic 0 1800 2032 4 28
+
+unit Zerg_Zergling 1 2240 1940 18 18
+unit Zerg_Hydralisk 1 2320 2060 8 28
+unit Zerg_Ultralisk 1 2380 1980 2 42

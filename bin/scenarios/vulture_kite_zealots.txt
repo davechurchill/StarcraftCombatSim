@@ -1,0 +1,7 @@
+# Vultures kite zealots by moving away during cooldown and turning back in time to fire.
+map (4)Python.scx
+script AttackClosest
+script 0 KiteClosest
+
+unit Terran_Vulture 0 1880 2048 8 36
+unit Protoss_Zealot 1 2240 2048 8 30

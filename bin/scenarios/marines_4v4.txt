@@ -1,0 +1,14 @@
+# StarCraftCombat scenario format:
+# map <SCX/SCM map path>
+# script <AttackClosest|KiteClosest|None>
+# script <player> <AttackClosest|KiteClosest|None>
+# unit <OpenBW UnitTypes enum name> <player> <x> <y> [count] [spacing]
+#
+# Relative map paths are resolved from the scenario directory first, then from
+# bin/starcraft_data/maps. Coordinates are StarCraft pixels on that map.
+
+map (4)Python.scx
+script AttackClosest
+
+unit Terran_Marine 0 1900 2048 4 18
+unit Terran_Marine 1 2200 2048 4 18

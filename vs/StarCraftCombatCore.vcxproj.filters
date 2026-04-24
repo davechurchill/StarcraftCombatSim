@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{91C8E7BD-9826-4E6C-88F3-6D7B13C0CF4B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{B606D7E7-8C3B-46C7-A55E-675E5666CA56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendored OpenBW">
+      <UniqueIdentifier>{4F8AF37F-6FE7-4B70-9957-1BBE4D9D84D4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\GameState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\GameState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\OpenBWCombat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Scripts.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\openbw\bwenums.h">
+      <Filter>Vendored OpenBW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\openbw\bwgame.h">
+      <Filter>Vendored OpenBW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\openbw\circular_vector.h">
+      <Filter>Vendored OpenBW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\openbw\containers.h">
+      <Filter>Vendored OpenBW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\openbw\data_loading.h">
+      <Filter>Vendored OpenBW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\openbw\data_types.h">
+      <Filter>Vendored OpenBW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\openbw\game_types.h">
+      <Filter>Vendored OpenBW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\openbw\intrusive_list.h">
+      <Filter>Vendored OpenBW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\openbw\korean.h">
+      <Filter>Vendored OpenBW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\openbw\static_vector.h">
+      <Filter>Vendored OpenBW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\openbw\strf.h">
+      <Filter>Vendored OpenBW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\openbw\util.h">
+      <Filter>Vendored OpenBW</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

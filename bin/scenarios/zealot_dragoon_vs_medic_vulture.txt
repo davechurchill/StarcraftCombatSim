@@ -1,0 +1,10 @@
+# 4 Zealots + 4 Dragoons vs 4 Medics + 4 Vultures
+
+map (4)Python.scx
+script AttackClosest
+
+unit Protoss_Zealot 0 1880 2024 4 28
+unit Protoss_Dragoon 0 1830 2092 4 44
+
+unit Terran_Medic 1 2220 2024 4 28
+unit Terran_Vulture 1 2270 2092 4 44

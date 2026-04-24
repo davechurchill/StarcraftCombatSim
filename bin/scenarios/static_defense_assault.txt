@@ -1,0 +1,12 @@
+# Mobile Zerg force attacking a small Protoss static-defense position
+
+map (4)Python.scx
+script AttackClosest
+
+unit Protoss_Pylon 0 1888 1980
+unit Protoss_Photon_Cannon 0 1960 1980 4 48
+unit Protoss_Dragoon 0 1880 2100 6 44
+
+unit Zerg_Zergling 1 2240 1980 16 18
+unit Zerg_Hydralisk 1 2320 2080 8 28
+unit Zerg_Ultralisk 1 2400 2000 2 44

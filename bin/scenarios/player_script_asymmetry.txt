@@ -1,0 +1,7 @@
+# Demonstrates per-player scripting.
+map (4)Python.scx
+script None
+script 0 AttackClosest
+
+unit Terran_Marine 0 1900 2048 4 18
+unit Terran_Marine 1 2200 2048 4 18

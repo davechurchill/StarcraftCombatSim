@@ -1,0 +1,12 @@
+# Vultures, goliaths, and tanks vs Zealot/Dragoon/Archon pressure
+
+map (4)Python.scx
+script AttackClosest
+
+unit Terran_Vulture 0 1840 1960 8 32
+unit Terran_Goliath 0 1790 2070 6 36
+unit Terran_Siege_Tank_Tank_Mode 0 1710 2020 4 46
+
+unit Protoss_Zealot 1 2240 1950 10 28
+unit Protoss_Dragoon 1 2320 2050 8 44
+unit Protoss_Archon 1 2400 1970 2 48

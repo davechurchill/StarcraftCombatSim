@@ -1,0 +1,11 @@
+# Mutalisks and Devourers testing air movement against Terran anti-air
+
+map (4)Python.scx
+script AttackClosest
+
+unit Zerg_Mutalisk 0 1880 1800 10 32
+unit Zerg_Devourer 0 1800 1900 4 44
+
+unit Terran_Wraith 1 2240 1800 6 36
+unit Terran_Goliath 1 2360 1900 6 36
+unit Terran_Marine 1 2420 1980 10 24

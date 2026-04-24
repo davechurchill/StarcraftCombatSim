@@ -1,0 +1,10 @@
+# Capital ships and escorts, useful for checking large sprites and carrier behavior
+
+map (4)Python.scx
+script AttackClosest
+
+unit Protoss_Carrier 0 1840 1600 3 64
+unit Protoss_Scout 0 1780 1720 4 44
+
+unit Terran_Battlecruiser 1 2240 1600 3 64
+unit Terran_Wraith 1 2320 1720 6 36

@@ -1,0 +1,10 @@
+# Pure air battle with cloak-capable fighters, splash anti-air, and Protoss air
+
+map (4)Python.scx
+script AttackClosest
+
+unit Terran_Wraith 0 1860 1800 8 36
+unit Terran_Valkyrie 0 1780 1880 4 44
+
+unit Protoss_Scout 1 2240 1800 8 44
+unit Protoss_Corsair 1 2320 1880 6 36
