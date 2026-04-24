@@ -1,3 +1,5 @@
+<video src="https://davechurchill.ca/files/video/bw.mp4" controls></video>
+
 # StarcraftCombatSim
 
 OpenBW-backed StarCraft combat scenarios with an API shaped like a small combat `GameState`.
